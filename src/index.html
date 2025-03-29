@@ -13,8 +13,8 @@
 <body>
 
     <div class=" h-[100vh] w-[100vw] flex  parentdiv ">
-        <div class="details bg-[#040404] p-1  h-[100vh] w-[20vw] overflow-auto ">
-            <div class="h-[6%] w-[100%] pl-3.5  bg-[#4bad7b] rounded-l sticky top-0 ">
+        <div class="details bg-[#040404] p-1  h-[100vh] w-[20vw] overflow-auto no-scrollbar ">
+            <div class="h-[6%] w-[100%] pl-3.5  bg-black border-white border-1 rounded-l sticky top-0 ">
                 <svg xmlns="http://www.w3.org/2000/svg" width="full" height="full" fill="white" class="bi bi-amd"
                     viewBox="0 0 16 16">
                     <path d="m.334 0 4.358 4.359h7.15v7.15l4.358 4.358V0zM.2 9.72l4.487-4.488v6.281h6.28L6.48 16H.2z" />
@@ -24,7 +24,7 @@
             <!-- this is the end of logo ( topleft div) -->
 
             <div
-                class="  bg-[#141414] h-[100%] w-[100%] overflow-auto flex flex-col gap-2 pt-8 pl-1.5 pr-1.5  rounded ">
+                class="  bg-[#141414] h-[100%] w-[100%] overflow-auto no-scrollbar flex flex-col gap-2 pt-8 pl-1.5 pr-1.5  rounded  ">
                 <div
                     class="bg-white/4 hover:bg-[#333333]   h-[6%] w-[100%] flex gap-5 pl-4 rounded-2xl hover:shadow-[0_0_1px_1px_#FFFFFF] transition duration-500">
                     <div class=" h-[70%] w-[20%] flex pt-2 ">
@@ -178,7 +178,7 @@
 
         <!-- this is the end of first ( lefmost div) -->
         <!-- this is big main div-->
-        <div class=" mainarera bg-[#040404]  h-[100vh] w-[60vw] overflow-auto  ">
+        <div class=" mainarera bg-[#040404]  h-[100vh] w-[60vw] overflow-auto no-scrollbar ">
             <!-- this is big div , above there are three bif divs-->
 
             <div class="  bg-[#040404] w-[100%] h-[8.5%] gap-3 sticky top-0 flex p-3 items-center justify-center ">
@@ -195,18 +195,18 @@
 
                 </div>
                 <div
-                    class="w-[60%] h-[90%] bg-white/6 rounded-3xl border-2 border-white hover:shadow-[0_0_2px_2px_#FFFFFF] transition duration-500">
+                    class="w-[60%] h-[90%] bg-white/6 rounded-3xl border-2 border-white hover:shadow-[0_0_2px_2px_#FFFFFF] transition duration-500 z-10">
                     <input class=" searchbar h-full w-full text-white  pl-3  rounded-3xl"
                         placeholder="What do you want to play?">
                 </div>
             </div>
 
 
-            <div class="h-[50%] w-[full] flex p-6 gap-8 pt-12 roundedl roundedt rounded-r-2xl "
+            <div class="h-[50%] w-[full] flex p-6 gap-8 pt-12 roundedl roundedt rounded-r-xl "
                 style="background: linear-gradient(to bottom, #29234d, #201c33, #141415, #1c1624)">
                 <!-- favourites section -->
                 <!-- used a style tag here for colour -->
-                <div class="    h-[70%] w-[30%] flex flex-col justify-center rounded items-center "
+                <div class="    hover:bg-[#4d4372] hover:shadow-[0_0_1px_1px_#FFFFFF] transition duration-500 h-[70%] w-[30%] flex flex-col justify-center rounded items-center "
                     style="background: linear-gradient(to bottom, #6f58e4, #8481da, #511ef2)">
                     <div>
 
@@ -216,14 +216,15 @@
                                 d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />
                         </svg>
                     </div>
-                    <div>
+                    <div class="text-white text-2xl">
                         Your Favourites
                     </div>
                 </div>
                 <!-- honey sing main div(next to the favourite main div)-->
 
                 <div class=" h-[70%] w-[70%]  flex flex-col p-2 pt-0 pb-0 gap-4">
-                    <div class="  bg-white/8   h-[20%] w-[90%] flex  gap-3 rounded ">
+                    <div
+                        class="  bg-white/8  hover:bg-[#4d4372] hover:shadow-[0_0_1px_1px_#FFFFFF] transition duration-500  h-[20%] w-[90%] flex  gap-3 rounded ">
                         <div class=" h-[100%] w-[10%] border-r border-white/8
                          flex justify-center items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="full" height="38" fill="white"
@@ -236,7 +237,8 @@
                             <button>Trending</button>
                         </div>
                     </div>
-                    <div class=" bg-white/8  h-[20%] w-[90%] flex gap-3 rounded ">
+                    <div
+                        class=" bg-white/8 hover:bg-[#4d4372] hover:shadow-[0_0_1px_1px_#FFFFFF] transition duration-500 h-[20%] w-[90%] flex gap-3 rounded ">
                         <div class=" h-full w-[10%] border-r border-white/8
                         flex justify-center items-center ">
                             <svg xmlns="http://www.w3.org/2000/svg" width="full" height="38" fill="white"
@@ -245,11 +247,12 @@
                                     d="M8.864.046C7.908-.193 7.02.53 6.956 1.466c-.072 1.051-.23 2.016-.428 2.59-.125.36-.479 1.013-1.04 1.639-.557.623-1.282 1.178-2.131 1.41C2.685 7.288 2 7.87 2 8.72v4.001c0 .845.682 1.464 1.448 1.545 1.07.114 1.564.415 2.068.723l.048.03c.272.165.578.348.97.484.397.136.861.217 1.466.217h3.5c.937 0 1.599-.477 1.934-1.064a1.86 1.86 0 0 0 .254-.912c0-.152-.023-.312-.077-.464.201-.263.38-.578.488-.901.11-.33.172-.762.004-1.149.069-.13.12-.269.159-.403.077-.27.113-.568.113-.857 0-.288-.036-.585-.113-.856a2 2 0 0 0-.138-.362 1.9 1.9 0 0 0 .234-1.734c-.206-.592-.682-1.1-1.2-1.272-.847-.282-1.803-.276-2.516-.211a10 10 0 0 0-.443.05 9.4 9.4 0 0 0-.062-4.509A1.38 1.38 0 0 0 9.125.111zM11.5 14.721H8c-.51 0-.863-.069-1.14-.164-.281-.097-.506-.228-.776-.393l-.04-.024c-.555-.339-1.198-.731-2.49-.868-.333-.036-.554-.29-.554-.55V8.72c0-.254.226-.543.62-.65 1.095-.3 1.977-.996 2.614-1.708.635-.71 1.064-1.475 1.238-1.978.243-.7.407-1.768.482-2.85.025-.362.36-.594.667-.518l.262.066c.16.04.258.143.288.255a8.34 8.34 0 0 1-.145 4.725.5.5 0 0 0 .595.644l.003-.001.014-.003.058-.014a9 9 0 0 1 1.036-.157c.663-.06 1.457-.054 2.11.164.175.058.45.3.57.65.107.308.087.67-.266 1.022l-.353.353.353.354c.043.043.105.141.154.315.048.167.075.37.075.581 0 .212-.027.414-.075.582-.05.174-.111.272-.154.315l-.353.353.353.354c.047.047.109.177.005.488a2.2 2.2 0 0 1-.505.805l-.353.353.353.354c.006.005.041.05.041.17a.9.9 0 0 1-.121.416c-.165.288-.503.56-1.066.56z" />
                             </svg>
                         </div>
-                        <div class=" flex justify-center  text-white">
+                        <div class=" flex justify-center  text-white ">
                             <button>Top rated</button>
                         </div>
                     </div>
-                    <div class=" bg-white/8  h-[20%] w-[90%] flex gap-3  rounded ">
+                    <div
+                        class=" bg-white/8  hover:bg-[#4d4372] hover:shadow-[0_0_1px_1px_#FFFFFF] transition duration-500 h-[20%] w-[90%] flex gap-3  rounded ">
                         <div class=" h-full w-[10%] border-r border-white/8
                         flex justify-center items-center">
                             <svg xmlns="http://www.w3.org/2000/svg" width="full" height="38" fill="white"
@@ -266,7 +269,8 @@
                             <button>Daily Mix</button>
                         </div>
                     </div>
-                    <div class=" bg-white/8  h-[20%] w-[90%]  flex gap-3 rounded ">
+                    <div
+                        class=" bg-white/8  hover:bg-[#4d4372] hover:shadow-[0_0_1px_1px_#FFFFFF] transition duration-500 h-[20%] w-[90%]  flex gap-3 rounded ">
                         <div class="border-r border-white/8
                         flex justify-center items-center h-full w-[10%]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="full" height="38" fill="white"
@@ -283,22 +287,135 @@
                 </div>
             </div>
 
-            <div class="w-[full] h-[55%] bg-[#1c1624] pl-6 flex flex-col gap-5  overflow-auto ">
-                <div class="text-2xl text-white ">
+            <div class="w-[full] h-[70%] bg-[#1c1624] flex flex-col gap-5  ">
+                <div class="text-2xl pl-6 text-white   rounded">
                     <p>Recommendation</p>
+                    <!-- i want from here left to right scrolling , just on this div-->
                 </div>
-                <div class="h-[40%] w-full border-2">
+                <div class="border-2 h-[31%] w-full flex gap-3   ">
+                    <div class="flex-1   rounded hover:shadow-[0_0_2px_2px_#FFFFFF] transition duration-500  ">
+                        <img src="coldplay.jpeg" class="w-[210.500px] h-[180px] rounded-lg" alt="">
+                    </div>
+                    <div class="flex-1 hover:shadow-[0_0_2px_2px_#FFFFFF] transition duration-500 rounded ">
+                        <img src="karan.jpg" class="w-[210.500px] h-[180px] rounded-lg" alt="">
+                    </div>
+                    <div class="flex-1 hover:shadow-[0_0_2px_2px_#FFFFFF] transition duration-500 rounded ">
+                        <img src="Zartman.jpeg" class="w-[210.500px] h-[180px] rounded-lg" alt="">
+                    </div>
+                    <div class="flex-1 hover:shadow-[0_0_2px_2px_#FFFFFF] transition duration-500 rounded ">
+                        <img src="weeknd.jpeg" class="w-[210.500px] h-[180px] rounded-lg" alt="">
+                    </div>
+                </div>
+                <div class="  rounded text-2xl text-white pl-6">
+                    Best of artists
+                </div>
+                <div class="border-2  h-[34%] w-full flex gap-3 ">
+                    <div class="flex-1 hover:shadow-[0_0_2px_2px_#FFFFFF] transition duration-500 rounded ">
+                        <img src="pritam.jpeg" class="w-[210.500px] h-[180px] rounded-lg" alt="">
+                    </div>
+                    <div class="flex-1 hover:shadow-[0_0_2px_2px_#FFFFFF] transition duration-500 rounded ">
+                        <img src="popdesi.jpeg" class="w-[210.500px] h-[180px] rounded-lg" alt="">
+                    </div>
+                    <div class="flex-1 hover:shadow-[0_0_2px_2px_#FFFFFF] transition duration-500 rounded ">
+                        <img src="onedirection.jpeg" class="w-[210.500px] h-[180px] rounded-lg" alt="">
+                    </div>
+                    <div class="flex-1 hover:shadow-[0_0_2px_2px_#FFFFFF] transition duration-500 rounded ">
+                        <img src="onerepubloc.jpeg" class="w-[210.500px] h-[180px] rounded-lg" alt="">
+                    </div>
+                </div>
+                <!-- control buttons , has one div which is sticky -->
 
-                </div>
-                <div class="h-[40%] w-full border-2">
+                <div class="border-2 h-[13%] w-full sticky bottom-0 bg-black flex  flex-col ">
+                    <div class="border-2  h-[100%] flex justify-center items-center gap-6 ">
+                        <div class="border-2  h-[100%] w-[5%]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="full" height="full" fill="white"
+                                class="bi bi-skip-backward-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M.5 3.5A.5.5 0 0 0 0 4v8a.5.5 0 0 0 1 0V8.753l6.267 3.636c.54.313 1.233-.066 1.233-.697v-2.94l6.267 3.636c.54.314 1.233-.065 1.233-.696V4.308c0-.63-.693-1.01-1.233-.696L8.5 7.248v-2.94c0-.63-.692-1.01-1.233-.696L1 7.248V4a.5.5 0 0 0-.5-.5" />
+                            </svg>
+                        </div>
+                        <div class="border-2  h-[100%] w-[5%]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="full" height="full" fill="white"
+                                class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
+                            </svg>
+                        </div>
+                        <div class="border-2  h-[100%] w-[5%]">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="full" height="full" fill="white"
+                                class="bi bi-skip-forward-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M15.5 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V8.753l-6.267 3.636c-.54.313-1.233-.066-1.233-.697v-2.94l-6.267 3.636C.693 12.703 0 12.324 0 11.693V4.308c0-.63.693-1.01 1.233-.696L7.5 7.248v-2.94c0-.63.693-1.01 1.233-.696L15 7.248V4a.5.5 0 0 1 .5-.5" />
+                            </svg>
+                        </div>
+                    </div>
 
                 </div>
             </div>
 
 
         </div>
-        <div class="songdetails bg-white h-[100vh] w-[20vw]">
+        <!-- the right most div -->
 
+        <div class="songdetails bg-black h-[100vh] w-[20vw] overflow-auto  no-scrollbar">
+            <div class="h-[8.5%] w-full bg-black sticky top-0">
+
+            </div>
+
+            <div class="h-full w-full bg-[#141414] rounded-2xl pl-2 pr-2">
+                <div class="text-xl text-white p-2.5 ">
+                    <p>Playing</p>
+                </div>
+                <!-- place where running song image should have  -->
+                <div class="h-[50%] w-full border border-white mt-2">
+
+                </div>
+                <!-- again buttons   -->
+                <div class=" h-[10%] w-full mt-3 flex items-center justify-center gap-6">
+                    <div class="flex-1  h-[50%] ">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="full" height="full" fill="white"
+                            class="bi bi-shuffle" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.6 9.6 0 0 0 7.556 8a9.6 9.6 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.6 10.6 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.6 9.6 0 0 0 6.444 8a9.6 9.6 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5" />
+                            <path
+                                d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192" />
+                        </svg>
+                    </div>
+                    <div class="flex-1  h-[50%]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="full" height="full" fill="white"
+                            class="bi bi-skip-backward-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M.5 3.5A.5.5 0 0 0 0 4v8a.5.5 0 0 0 1 0V8.753l6.267 3.636c.54.313 1.233-.066 1.233-.697v-2.94l6.267 3.636c.54.314 1.233-.065 1.233-.696V4.308c0-.63-.693-1.01-1.233-.696L8.5 7.248v-2.94c0-.63-.692-1.01-1.233-.696L1 7.248V4a.5.5 0 0 0-.5-.5" />
+                        </svg>
+                    </div>
+                    <div class="flex-1  h-[50%]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="full" height="full" fill="white"
+                            class="bi bi-play-circle" viewBox="0 0 16 16">
+                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                            <path
+                                d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445" />
+                        </svg>
+                    </div>
+                    <div class="flex-1  h-[50%]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="full" height="full" fill="white"
+                            class="bi bi-skip-forward-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M15.5 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V8.753l-6.267 3.636c-.54.313-1.233-.066-1.233-.697v-2.94l-6.267 3.636C.693 12.703 0 12.324 0 11.693V4.308c0-.63.693-1.01 1.233-.696L7.5 7.248v-2.94c0-.63.693-1.01 1.233-.696L15 7.248V4a.5.5 0 0 1 .5-.5" />
+                        </svg>
+                    </div>
+                    <div class="flex-1  h-[50%]">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="full" height="full" fill="white"
+                            class="bi bi-repeat" viewBox="0 0 16 16">
+                            <path
+                                d="M11 5.466V4H5a4 4 0 0 0-3.584 5.777.5.5 0 1 1-.896.446A5 5 0 0 1 5 3h6V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m3.81.086a.5.5 0 0 1 .67.225A5 5 0 0 1 11 13H5v1.466a.25.25 0 0 1-.41.192l-2.36-1.966a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V12h6a4 4 0 0 0 3.585-5.777.5.5 0 0 1 .225-.67Z" />
+                        </svg>
+                    </div>
+
+                </div>
+                <div class="bg-white h-[5%] w-full mt-2">
+
+                </div>
+            </div>
         </div>
 
 
