@@ -2,16 +2,12 @@
 function greet() {
     alert("Hello from the external JavaScript file!");
 }
-module.exports = {
-    theme: {
-      extend: {
-        colors: {
-          'custom-purple-1': '#6f58e4',
-          'custom-purple-2': '#8481da',
-          'custom-purple-3': '#511ef2',
-        },
-      },
-    },
-    plugins: [],
-  };
-  
+
+
+ 
+
+console.log("JavaScript is linked correctly!");
+document.querySelector('.ram').addEventListener('click', function() {
+    document.querySelector('.songdetails').classList.remove('hidden')
+     // Toggle slide-in and slide-out
+});
