@@ -482,20 +482,11 @@
   .h-\[10\%\] {
     height: 10%;
   }
-  .h-\[13\%\] {
-    height: 13%;
-  }
-  .h-\[18\%\] {
-    height: 18%;
-  }
   .h-\[20\%\] {
     height: 20%;
   }
   .h-\[21\%\] {
     height: 21%;
-  }
-  .h-\[34\%\] {
-    height: 34%;
   }
   .h-\[50\%\] {
     height: 50%;
@@ -523,15 +514,6 @@
   }
   .h-\[160px\] {
     height: 160px;
-  }
-  .h-\[170px\] {
-    height: 170px;
-  }
-  .h-\[180px\] {
-    height: 180px;
-  }
-  .h-\[200px\] {
-    height: 200px;
   }
   .h-full {
     height: 100%;
@@ -566,9 +548,6 @@
   .w-\[20vw\] {
     width: 20vw;
   }
-  .w-\[30\%\] {
-    width: 30%;
-  }
   .w-\[50px\] {
     width: 50px;
   }
@@ -590,9 +569,6 @@
   .w-\[100vw\] {
     width: 100vw;
   }
-  .w-\[210\.500px\] {
-    width: 210.500px;
-  }
   .w-\[full\] {
     width: full;
   }
@@ -608,20 +584,8 @@
   .max-w-screen {
     max-width: 100vw;
   }
-  .min-w-\[140px\] {
-    min-width: 140px;
-  }
   .min-w-\[170px\] {
     min-width: 170px;
-  }
-  .min-w-\[190px\] {
-    min-width: 190px;
-  }
-  .min-w-\[210px\] {
-    min-width: 210px;
-  }
-  .min-w-\[220px\] {
-    min-width: 220px;
   }
   .min-w-full {
     min-width: 100%;
