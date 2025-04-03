@@ -141,5 +141,31 @@ document.querySelector('.cross').addEventListener('click', function () {
 
 });*/
 
+let firstsong = document.querySelector('.forwardsong1');
+let secondsong = document.querySelector('.forwardsong2');
+let thirdsong = document.querySelector('.forwardsong3')
+
+
+
+let forwardcurrentsong= 0;
+let forwardbutton = [ firstsong,secondsong,thirdsong];
+document.querySelector('.forward').addEventListener('click',function(){
+
+    currentsong.pause();
+    forwardbutton[forwardcurrentsong].pause();
+    forwardbutton[forwardcurrentsong].currentTime=0;
+    forwardcurrentsong++;
+    if(forwardcurrentsong>2){
+        forwardcurrentsong=0;
+    }
+    forwardbutton[forwardcurrentsong].play();
+
+
+
+
+
+
+})
+
 
 
