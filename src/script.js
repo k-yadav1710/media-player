@@ -194,6 +194,23 @@ document.querySelector('.forward').addEventListener('click', function () {
     if (forwardcurrentsong > 2) {
         forwardcurrentsong = 0;
     }
+    if(forwardcurrentsong===0){
+        document.querySelector('.songdetails').classList.remove('hidden')
+        document.querySelector('.currentsong').src = '../assest/despactio.jpeg'
+
+    }
+    else if(forwardcurrentsong===1){
+        document.querySelector('.songdetails').classList.remove('hidden')
+        document.querySelector('.currentsong').src = '../assest/blindinglight.jpeg'
+
+    }
+
+    else if (forwardcurrentsong===2){
+        document.querySelector('.songdetails').classList.remove('hidden')
+        document.querySelector('.currentsong').src = '../assest/thatstrue.jpeg'
+
+    }
+
     forwardbutton[forwardcurrentsong].play();
     document.querySelector('.ram').innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="full" height="full" fill="white" class="bi bi-pause-circle-fill" viewBox="0 0 16 16">
         <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.25 5C5.56 5 5 5.56 5 6.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C7.5 5.56 6.94 5 6.25 5m3.5 0c-.69 0-1.25.56-1.25 1.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C11 5.56 10.44 5 9.75 5"/>
@@ -212,6 +229,23 @@ document.querySelector('.backward').addEventListener('click', function () {
     if (forwardcurrentsong < 0) {
         forwardcurrentsong = 2;
     }
+    if(forwardcurrentsong===0){
+        document.querySelector('.songdetails').classList.remove('hidden')
+        document.querySelector('.currentsong').src = '../assest/despactio.jpeg'
+
+    }
+    else if(forwardcurrentsong===1){
+        document.querySelector('.songdetails').classList.remove('hidden')
+        document.querySelector('.currentsong').src = '../assest/blindinglight.jpeg'
+
+    }
+
+    else if (forwardcurrentsong===2){
+        document.querySelector('.songdetails').classList.remove('hidden')
+        document.querySelector('.currentsong').src = '../assest/thatstrue.jpeg'
+
+    }
+    
     forwardbutton[forwardcurrentsong].play();
 
 
