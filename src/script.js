@@ -20,11 +20,13 @@ function songPlayAccordingly(nameOfTheDiv, whichAudio, imageOfTheSong) {
     document.querySelector(nameOfTheDiv).addEventListener('click', function () {
 
         if (currentsong === null) {
+            forwardbutton[forwardcurrentsong].pause();
             document.querySelector(whichAudio).play();
         }
         else {
            currentsong.pause();
            currentsong.currentTime = 0;
+           forwardbutton[forwardcurrentsong].pause();
             document.querySelector(whichAudio).play();
         }
         currentsong = document.querySelector(whichAudio);
@@ -160,7 +162,22 @@ document.querySelector('.forward').addEventListener('click',function(){
     }
     forwardbutton[forwardcurrentsong].play();
 
+   
+});
 
+document.querySelector('.backward').addEventListener('click',function(){
+
+    currentsong.pause();
+    forwardbutton[forwardcurrentsong].pause();
+    forwardbutton[forwardcurrentsong].currentTime=0;
+    forwardcurrentsong--;
+     if(forwardcurrentsong<0){
+        forwardcurrentsong=2;
+    }
+    forwardbutton[forwardcurrentsong].play();
+
+
+        
 
 
 
