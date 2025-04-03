@@ -24,9 +24,9 @@ function songPlayAccordingly(nameOfTheDiv, whichAudio, imageOfTheSong) {
             document.querySelector(whichAudio).play();
         }
         else {
-           currentsong.pause();
-           currentsong.currentTime = 0;
-           forwardbutton[forwardcurrentsong].pause();
+            currentsong.pause();
+            currentsong.currentTime = 0;
+            forwardbutton[forwardcurrentsong].pause();
             document.querySelector(whichAudio).play();
         }
         currentsong = document.querySelector(whichAudio);
@@ -73,24 +73,58 @@ songPlayAccordingly('.weekend', '.starboy', '../assest/starboyimage.jpeg');
 
 
 
-
+let pausevariable = 0;
 document.querySelector('.ram').addEventListener('click', function () {
 
-        if (currentsong.paused) {
-           currentsong.play();
-            document.querySelector('.ram').innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="full" height="full" fill="white" class="bi bi-pause-circle-fill" viewBox="0 0 16 16">
-        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.25 5C5.56 5 5 5.56 5 6.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C7.5 5.56 6.94 5 6.25 5m3.5 0c-.69 0-1.25.56-1.25 1.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C11 5.56 10.44 5 9.75 5"/>
-      </svg>`;
-        }
-        else {
-           currentsong.pause();
-         document.querySelector('.ram').innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="full" height="full" fill="white"
+    /*if (currentsong.paused ) {
+       currentsong.play();
+        document.querySelector('.ram').innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="full" height="full" fill="white" class="bi bi-pause-circle-fill" viewBox="0 0 16 16">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.25 5C5.56 5 5 5.56 5 6.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C7.5 5.56 6.94 5 6.25 5m3.5 0c-.69 0-1.25.56-1.25 1.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C11 5.56 10.44 5 9.75 5"/>
+  </svg>`;
+    }*/
+
+    if (currentsong.paused && !forwardbutton[forwardcurrentsong].paused) {
+        forwardbutton[forwardcurrentsong].pause();
+        pausevariable = 0;
+
+        document.querySelector('.ram').innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="full" height="full" fill="white"
+            class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+            <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
+        </svg>`;
+    }
+    else if (!currentsong.paused && forwardbutton[forwardcurrentsong].paused) {
+        currentsong.pause();
+        pausevariable = 1;
+        document.querySelector('.ram').innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="full" height="full" fill="white"
         class="bi bi-play-circle-fill" viewBox="0 0 16 16">
         <path
             d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
     </svg>`;
-        }
-    
+    }
+    else if (currentsong.paused && forwardbutton[forwardcurrentsong].paused && pausevariable === 1) {
+        currentsong.play();
+        document.querySelector('.ram').innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="full" height="full" fill="white" class="bi bi-pause-circle-fill" viewBox="0 0 16 16">
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.25 5C5.56 5 5 5.56 5 6.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C7.5 5.56 6.94 5 6.25 5m3.5 0c-.69 0-1.25.56-1.25 1.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C11 5.56 10.44 5 9.75 5"/>
+      </svg>`;
+    }
+    else if (currentsong.paused && forwardbutton[forwardcurrentsong].paused && pausevariable === 0){
+        forwardbutton[forwardcurrentsong].play();
+        document.querySelector('.ram').innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="full" height="full" fill="white" class="bi bi-pause-circle-fill" viewBox="0 0 16 16">
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.25 5C5.56 5 5 5.56 5 6.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C7.5 5.56 6.94 5 6.25 5m3.5 0c-.69 0-1.25.56-1.25 1.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C11 5.56 10.44 5 9.75 5"/>
+      </svg>`;
+    }
+
+
+    else {
+      
+     document.querySelector('.ram').innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="full" height="full" fill="white"
+    class="bi bi-play-circle-fill" viewBox="0 0 16 16">
+    <path
+        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z" />
+</svg>`;
+    }
+
 });
 
 
@@ -149,35 +183,39 @@ let thirdsong = document.querySelector('.forwardsong3')
 
 
 
-let forwardcurrentsong= 0;
-let forwardbutton = [ firstsong,secondsong,thirdsong];
-document.querySelector('.forward').addEventListener('click',function(){
+let forwardcurrentsong = 0;
+let forwardbutton = [firstsong, secondsong, thirdsong];
+document.querySelector('.forward').addEventListener('click', function () {
 
     currentsong.pause();
     forwardbutton[forwardcurrentsong].pause();
-    forwardbutton[forwardcurrentsong].currentTime=0;
+    forwardbutton[forwardcurrentsong].currentTime = 0;
     forwardcurrentsong++;
-    if(forwardcurrentsong>2){
-        forwardcurrentsong=0;
+    if (forwardcurrentsong > 2) {
+        forwardcurrentsong = 0;
     }
     forwardbutton[forwardcurrentsong].play();
+    document.querySelector('.ram').innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="full" height="full" fill="white" class="bi bi-pause-circle-fill" viewBox="0 0 16 16">
+        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.25 5C5.56 5 5 5.56 5 6.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C7.5 5.56 6.94 5 6.25 5m3.5 0c-.69 0-1.25.56-1.25 1.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C11 5.56 10.44 5 9.75 5"/>
+      </svg>`;
 
-   
+
+
 });
 
-document.querySelector('.backward').addEventListener('click',function(){
+document.querySelector('.backward').addEventListener('click', function () {
 
     currentsong.pause();
     forwardbutton[forwardcurrentsong].pause();
-    forwardbutton[forwardcurrentsong].currentTime=0;
+    forwardbutton[forwardcurrentsong].currentTime = 0;
     forwardcurrentsong--;
-     if(forwardcurrentsong<0){
-        forwardcurrentsong=2;
+    if (forwardcurrentsong < 0) {
+        forwardcurrentsong = 2;
     }
     forwardbutton[forwardcurrentsong].play();
 
 
-        
+
 
 
 
