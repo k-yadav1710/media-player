@@ -9,7 +9,9 @@
 
     <title>Document</title>
 </head>
-
+<style>
+    
+</style>
 <body>
 
     <div class=" h-[100vh] w-[100vw] flex  parentdiv ">
@@ -382,7 +384,7 @@
                 </div>
                 <!-- control buttons , has one div which is sticky -->
 
-                <div class=" h-[21%] w-full sticky bottom-0 bg-transparent pt-15 flex   flex-col  ">
+                <div class=" h-[23%] w-full sticky bottom-0 bg-transparent pt-15 flex   flex-col  ">
                     <div class=" border-2  bg-black h-[60%] flex justify-center items-center gap-6 ">
                         <div class=" backward border-2  h-[100%] w-[5%]">
                             <svg xmlns="http://www.w3.org/2000/svg" width="full" height="full" fill="white"
@@ -407,8 +409,9 @@
                         </div>
 
                     </div>
-                    <div class="bg-red-50 h-full w-full flex ">
-
+                    <div class="bg-black h-full w-full flex justify-center items-center ">
+                        <div class="time-display text-white mr-2">0:00 / 3:30</div>
+                     <input class="audio-progress-bar   w-[60%] cursor-pointer" type="range" min="0" max="100" value="0" style="accent-color: white; height: 8px; background: black;" >
                     </div>
 
                 </div>
@@ -499,7 +502,7 @@
     <audio class="forwardsong3" src="../assest/ThatsSotrue.mp3"></audio>
     <audio class="forwardsong4" src="../assest/karanyaad.mp3"></audio>
     <audio class="forwardsong5" src="../assest/karanyaad.mp3"></audio>
-    <img src="../assest/despactio.jpeg" alt="">
+   
     <script src="script.js"></script>
 
 
