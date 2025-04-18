@@ -14,7 +14,9 @@ function greet() {
     document.querySelector('.currentsong').src = 'coldplay.jpeg'
 });*/
 let currentsong = null;
-function songPlayAccordingly(nameOfTheDiv, whichAudio, imageOfTheSong) {
+function songPlayAccordingly(nameOfTheDiv, whichAudio, imageOfTheSong ,name ,artist
+    ,year
+) {
 
 
     document.querySelector(nameOfTheDiv).addEventListener('click', function () {
@@ -41,6 +43,10 @@ function songPlayAccordingly(nameOfTheDiv, whichAudio, imageOfTheSong) {
         document.querySelector('.currentsong').src = imageOfTheSong
         document.querySelector('.currentsong').style.width = '100%'
         document.querySelector('.currentsong').style.height = '100%'
+        document.querySelector( '.a').innerHTML=  `Song name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${name}`
+        document.querySelector( '.b').innerHTML=  `Artist name :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${artist}`
+        document.querySelector( '.c').innerHTML=  `Released :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp&nbsp&nbsp&nbsp;${year}`
+
 
 
         const progressBar = document.querySelector('.audio-progress-bar');
@@ -74,10 +80,10 @@ function formatTime(seconds) {
     return `${minutes}:${remainingSeconds < 10 ? '0' + remainingSeconds : remainingSeconds}`;
 }
 
-songPlayAccordingly('.coldplay', '.audio', 'coldplay.jpeg');
-songPlayAccordingly('.judwaa', '.hero', '../assest/judwaaimage.jpeg');
-songPlayAccordingly('.karan', '.karanyaad', '../assest/karanyaad.jpg');
-songPlayAccordingly('.weekend', '.starboy', '../assest/starboyimage.jpeg');
+songPlayAccordingly('.coldplay', '.audio', 'coldplay.jpeg' ,'Hymn For The Weekend' , 'Coldplay' , '2015');
+songPlayAccordingly('.judwaa', '.hero', '../assest/judwaaimage.jpeg ' ,'I am hero', 'Arijit singh' , '2018');
+songPlayAccordingly('.karan', '.karanyaad', '../assest/karanyaad.jpg', 'Karan aujhla', 'My heart', '2019');
+songPlayAccordingly('.weekend', '.starboy', '../assest/starboyimage.jpeg' , 'The weekend', 'Starboy' ,'2017' );
 
 
 
